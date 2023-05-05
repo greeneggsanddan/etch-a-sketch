@@ -1,0 +1,33 @@
+#container {
+    height: 840px;
+    width: 840px;
+    padding: 32px;
+    border: 12px solid black;
+    border-radius: 32px;
+    display: flex;
+    flex-direction: column;
+}
+
+.row {
+    display: flex;
+}
+
+.grid,
+.grid-bottom {
+    border-top: 1px solid black;
+    border-left: 1px solid black;
+    height: 80px;
+    width: 80px;
+}
+
+.grid:last-child {
+    border-right: 1px solid black;
+}
+
+.grid-bottom {
+    border-bottom: 1px solid black;
+}
+
+.grid-bottom:last-child {
+    border-right: 1px solid black;
+}
