@@ -1,4 +1,4 @@
-const container = document.querySelector("#container");
+const screen = document.querySelector("#screen");
 
 function createGrid (size) {
     for (let i = 0; i < size; i++) {
@@ -16,7 +16,7 @@ function createGrid (size) {
             }
             row.appendChild(div);
         }
-        container.appendChild(row);
+        screen.appendChild(row);
     }
 }
 
@@ -25,19 +25,19 @@ function removeGrid() {
 
 const smallButton = document.querySelector("#small");
 smallButton.addEventListener("click", () => {
-    document.getElementById("container").innerHTML = "";
+    document.getElementById("screen").innerHTML = "";
     createGrid(10);
 });
 
 const mediumButton = document.querySelector("#medium");
 mediumButton.addEventListener("click", () => {
-    document.getElementById("container").innerHTML = "";
+    document.getElementById("screen").innerHTML = "";
     createGrid(25);
 });
 
 const largeButton = document.querySelector("#large");
 largeButton.addEventListener("click", () => {
-    document.getElementById("container").innerHTML = "";
+    document.getElementById("screen").innerHTML = "";
     createGrid(50);
 });
 
