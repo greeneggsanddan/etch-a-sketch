@@ -10,15 +10,15 @@
 
 .row {
     display: flex;
+    flex: 1;
 }
 
 .grid,
 .grid-bottom {
     border-top: 1px solid black;
     border-left: 1px solid black;
-    height: 60px;
-    width: 60px;
     box-sizing: border-box;
+    flex: 1;
 }
 
 .grid:last-child {

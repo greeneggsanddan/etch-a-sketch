@@ -32,13 +32,13 @@ smallButton.addEventListener("click", () => {
 const mediumButton = document.querySelector("#medium");
 mediumButton.addEventListener("click", () => {
     document.getElementById("container").innerHTML = "";
-    createGrid(50);
+    createGrid(25);
 });
 
 const largeButton = document.querySelector("#large");
 largeButton.addEventListener("click", () => {
     document.getElementById("container").innerHTML = "";
-    createGrid(100);
+    createGrid(50);
 });
 
 createGrid(10);
