@@ -26,7 +26,7 @@ function removeGrid() {
 const smallButton = document.querySelector("#small");
 smallButton.addEventListener("click", () => {
     document.getElementById("screen").innerHTML = "";
-    createGrid(10);
+    createGrid(12);
 });
 
 const mediumButton = document.querySelector("#medium");
@@ -41,4 +41,4 @@ largeButton.addEventListener("click", () => {
     createGrid(50);
 });
 
-createGrid(10);
+createGrid(12);

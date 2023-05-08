@@ -43,7 +43,7 @@
 #buttons {
     display: flex;
     justify-content: space-between;
-
+    margin-top: 32px;
 }
 
 .left-button,
@@ -51,14 +51,26 @@
     font-size: 16px;
     color: #F5F5F5;
     border: none;
-    border-radius: 32px;
+    border-radius: 20px;
     padding: 10px 20px;
 }
 
 .left-button {
     background-color: #444245;
+    box-shadow: 0 5px #888888;
+}
+
+.left-button:active {
+    box-shadow: 0 3px #888888;
+    transform: translateY(2px);
 }
 
 .right-button {
     background-color: #97275f;
+    box-shadow: 0 5px #611b40;
+}
+
+.right-button:active {
+    box-shadow: 0 3px #611b40;
+    transform: translateY(2px);
 }
