@@ -9,19 +9,22 @@ function createGrid (size) {
             div.addEventListener("mouseover", () => {
                 div.style.backgroundColor = "#0F380F";
             });
-            if (i == size -1) {
-                div.classList.add("grid-bottom");
-            } else {
-                div.classList.add("grid");
-            }
+            div.classList.add("grid");
             row.appendChild(div);
         }
         screen.appendChild(row);
     }
 }
 
-function removeGrid() {
+function clearGrid() {
+    const divs = document.querySelectorAll(".grid");
+    divs.forEach(div => {
+        div.style.backgroundColor = "#CADC9F";
+    });
 }
+
+function removeGrid() {
+}   
 
 const smallButton = document.querySelector("#small");
 smallButton.addEventListener("click", () => {
@@ -40,5 +43,8 @@ largeButton.addEventListener("click", () => {
     document.getElementById("screen").innerHTML = "";
     createGrid(50);
 });
+
+const clearButton = document.querySelector("#clear")
+clearButton.addEventListener("click", clearGrid);
 
 createGrid(12);

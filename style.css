@@ -19,31 +19,16 @@
     flex: 1;
 }
 
-.grid,
-.grid-bottom {
+.grid {
     background-color: #CADC9F;
-    /* border-top: 1px solid #CADC9F;
-    border-left: 1px solid #CADC9F; */
     box-sizing: border-box;
     flex: 1;
 }
 
-/* .grid:last-child {
-    border-right: 1px solid #CADC9F;
-}
-
-.grid-bottom {
-    border-bottom: 1px solid #CADC9F;
-}
-
-.grid-bottom:last-child {
-    border-right: 1px solid #CADC9F;
-} */
-
 #buttons {
     display: flex;
     justify-content: space-between;
-    margin-top: 32px;
+    margin-top: 48px;
 }
 
 .left-button,
