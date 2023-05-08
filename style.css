@@ -15,20 +15,21 @@
 
 .grid,
 .grid-bottom {
-    border-top: 1px solid black;
-    border-left: 1px solid black;
+    background-color: #CADC9F;
+    /* border-top: 1px solid #CADC9F;
+    border-left: 1px solid #CADC9F; */
     box-sizing: border-box;
     flex: 1;
 }
 
 .grid:last-child {
-    border-right: 1px solid black;
+    /* border-right: 1px solid #CADC9F; */
 }
 
 .grid-bottom {
-    border-bottom: 1px solid black;
+    /* border-bottom: 1px solid #CADC9F; */
 }
 
 .grid-bottom:last-child {
-    border-right: 1px solid black;
+    /* border-right: 1px solid #CADC9F; */
 }

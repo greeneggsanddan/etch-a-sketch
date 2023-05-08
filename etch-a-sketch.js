@@ -7,7 +7,7 @@ function createGrid (size) {
         for (let j = 0; j < size; j++) {
             const div = document.createElement("div");
             div.addEventListener("mouseover", () => {
-                div.style.backgroundColor = "black";
+                div.style.backgroundColor = "#0F380F";
             });
             if (i == size -1) {
                 div.classList.add("grid-bottom");
