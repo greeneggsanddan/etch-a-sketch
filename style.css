@@ -1,8 +1,15 @@
-#body {
+body {
+    display: flex;
+    justify-content: center;
+    background-color: #9ccbcb;
+}
+
+#gameboy {
     width: fit-content;
     background-color: #e2e2e2;
     padding: 64px;
     border-radius: 64px;
+    margin-top: 64px;
 }
 
 #screen {

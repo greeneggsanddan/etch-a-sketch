@@ -10,7 +10,6 @@ function createGrid (size) {
             div.addEventListener("mouseover", () => {
                 if (colorPalette === "color") {
                     const random = Math.floor(Math.random() * 100);
-                    console.log(random);
                     if (random < 25) {
                         div.style.backgroundColor = "#0F380F";
                     } else if (random < 50) {
