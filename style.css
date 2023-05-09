@@ -31,6 +31,12 @@
     margin-top: 48px;
 }
 
+#left-buttons,
+#right-buttons {
+    display: flex;
+    gap: 8px;
+}
+
 .left-button,
 .right-button {
     font-size: 16px;

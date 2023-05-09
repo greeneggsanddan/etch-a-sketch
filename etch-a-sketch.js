@@ -16,15 +16,34 @@ function createGrid (size) {
     }
 }
 
+function setMono() {
+
+}
+
+function setColor() {
+    const divs = document.querySelectorAll(".grid");
+    divs.forEach(div => {
+        div.addEventListener("mouseover", () => {
+            const random = Math.floor(Math.random()) * 100;
+            if (random < 25) {
+                div.style.backgroundColor = "#0F380F";
+            } else if (random < 50) {
+                div.style.backgroundColor = "#306230";
+            } else if (random < 75) {
+                div.style.backgroundColor = "#8BAC0F";
+            } else {
+                div.style.backgroundColor = "9BBC0F";
+            }
+        })
+    });
+}
+
 function clearGrid() {
     const divs = document.querySelectorAll(".grid");
     divs.forEach(div => {
         div.style.backgroundColor = "#CADC9F";
     });
 }
-
-function removeGrid() {
-}   
 
 const smallButton = document.querySelector("#small");
 smallButton.addEventListener("click", () => {
@@ -44,7 +63,13 @@ largeButton.addEventListener("click", () => {
     createGrid(50);
 });
 
-const clearButton = document.querySelector("#clear")
+const monoButton = document.querySelector("#mono");
+monoButton.addEventListener("click", setMono);
+
+const colorButton = document.querySelector("#color");
+colorButton.addEventListener("click", setColor);
+
+const clearButton = document.querySelector("#clear");
 clearButton.addEventListener("click", clearGrid);
 
 createGrid(12);
