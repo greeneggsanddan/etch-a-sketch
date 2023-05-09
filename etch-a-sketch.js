@@ -1,4 +1,5 @@
 const screen = document.querySelector("#screen");
+let colorPalette = "mono";
 
 function createGrid (size) {
     for (let i = 0; i < size; i++) {
@@ -7,35 +8,27 @@ function createGrid (size) {
         for (let j = 0; j < size; j++) {
             const div = document.createElement("div");
             div.addEventListener("mouseover", () => {
-                div.style.backgroundColor = "#0F380F";
+                if (colorPalette === "color") {
+                    const random = Math.floor(Math.random() * 100);
+                    console.log(random);
+                    if (random < 25) {
+                        div.style.backgroundColor = "#0F380F";
+                    } else if (random < 50) {
+                        div.style.backgroundColor = "#306230";
+                    } else if (random < 75) {
+                        div.style.backgroundColor = "#8BAC0F";
+                    } else {
+                        div.style.backgroundColor = "9BBC0F";
+                    }
+                } else {
+                    div.style.backgroundColor = "#0F380F"
+                }
             });
             div.classList.add("grid");
             row.appendChild(div);
         }
         screen.appendChild(row);
     }
-}
-
-function setMono() {
-
-}
-
-function setColor() {
-    const divs = document.querySelectorAll(".grid");
-    divs.forEach(div => {
-        div.addEventListener("mouseover", () => {
-            const random = Math.floor(Math.random()) * 100;
-            if (random < 25) {
-                div.style.backgroundColor = "#0F380F";
-            } else if (random < 50) {
-                div.style.backgroundColor = "#306230";
-            } else if (random < 75) {
-                div.style.backgroundColor = "#8BAC0F";
-            } else {
-                div.style.backgroundColor = "9BBC0F";
-            }
-        })
-    });
 }
 
 function clearGrid() {
@@ -64,10 +57,10 @@ largeButton.addEventListener("click", () => {
 });
 
 const monoButton = document.querySelector("#mono");
-monoButton.addEventListener("click", setMono);
+monoButton.addEventListener("click", () => colorPalette = "mono");
 
 const colorButton = document.querySelector("#color");
-colorButton.addEventListener("click", setColor);
+colorButton.addEventListener("click", () => colorPalette = "color");
 
 const clearButton = document.querySelector("#clear");
 clearButton.addEventListener("click", clearGrid);
